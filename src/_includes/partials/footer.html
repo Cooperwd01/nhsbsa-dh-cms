@@ -1,0 +1,13 @@
+<footer class="footer-style page-footer font-small mt-3 pt-3 pb-3">
+  <div class="container text-md-left">
+    <div class="row row-ftr">
+      <div class="col-12">
+        <h2 class="footer-title">{{settings.name}}</h2>
+        <ul class="list-unstyled mt-4">
+          <li class="ftr-nav-link"><a class="ftr-underline-animation ftr-link" href="#about-us">About</a></li>
+        </ul>
+        <p class="copyright-text">Copyright © {{settings.name}} <span x-data="{ text: new Date().getFullYear() }" x-text="text">2020</span>. Made with ❤ by <a class="author-link" href="https://www.willcooper.uk/" target="_blank" class="underline" rel="noopener">{{settings.author}}</a></p>
+      </div>    
+    </div>
+  </div>
+</footer>

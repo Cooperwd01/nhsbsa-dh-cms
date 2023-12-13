@@ -1,0 +1,25 @@
+{% set postslist = collections.post %}
+
+{% for post in postslist | reverse %}
+  <div class="col-6 col-md-4 col-lg-3 mt-3 mb-3">
+    <div id="post-{{ loop.index }}" class="card-wdc card m-0 w-100">
+      {% if post.data.image %}
+        <div class="card-image-container" style="background-image: url({{post.data.image}})">
+          <!-- <img class="card-img-top" src="{{ post.data.image }}" alt="{{ post.data.alt }}" /> -->
+        </div>
+      {% endif %}
+      
+      <div class="card-body">
+        <p class="card-text text-center"np>
+          <a class="stretched-link text-center" href="{{ post.url | url }}">
+            {% if post.data.title %}
+              {{ post.data.title }}
+            {% else %}
+              Untitled
+            {% endif %}
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+{% endfor %}

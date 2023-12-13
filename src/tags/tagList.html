@@ -1,0 +1,28 @@
+---
+layout: default
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+permalink: /tags/{{ tag }}/
+---
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-md-8 mt-4">
+      <div class="list-container">
+        <h1>Viewing all posts for '{{ tag }}'</h1>
+        <ul class="post-list pl-0" >
+        {% set taglist = collections[ tag ] %}
+        {% for post in taglist | reverse %}
+          <li class="post-list-item">
+            <a href="{{ post.url }}">
+              <img class="post-list-img" src="{{post.data.image}}" aria-hidden="true" />
+              {{ post.data.title }}
+            </a>
+          </li>
+        {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

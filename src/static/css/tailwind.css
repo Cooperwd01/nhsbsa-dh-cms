@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*Your Custom CSS Goes here*/
+
+h1 {
+  @apply text-4xl tracking-tighter mb-3 text-center lg:text-7xl;
+}
+
+h3 {
+  @apply text-2xl font-bold mb-3;
+}
+
+/* Syntax Highlighting*/
+
+body :not(pre) > code[class*="language-"],
+body pre[class*="language-"] {
+  @apply bg-gray-800;
+}
+ 
+.stretched-link::after {
+  content: "";
+  @apply z-10 absolute inset-0 bg-transparent pointer-events-auto;
+}
+/* my site css (tailwind is shite) */
+/* blog */
+.blog-flex{
+  flex-direction: column;
+  display: flex;
+  padding: 10px;
+}
+.blog-img {
+  width: 100%;
+  margin-bottom: 20px;
+  margin-right: 0px;
+}
+@media only screen and (min-width: 601px) {
+  .blog-flex{
+    flex-direction: row;
+  }
+  .blog-img {
+    width: 25%;
+    margin-right: 20px;
+    margin-bottom: 0px;
+  } 
+}
+/* body */
+html {
+  background: linear-gradient(90deg, #2cb9f6, #53a2ec, #728ad9, #8971bf, #96589e, #9a3f79, #942953, #85182e);
+}
+main {
+  background: #fff;
+}
+header {
+  background: #fff;
+}
+/* footer */
+.footer-bg {
+  background: transparent;
+}
+.border-top-navy {
+  border-top: 2px solid #08007e;
+}
