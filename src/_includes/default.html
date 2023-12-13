@@ -19,6 +19,9 @@
 
     <link href="/nhsuk-frontend/dist/nhsuk.css" rel="stylesheet">
     <script src="/nhsuk-frontend/dist/nhsuk.min.js" defer></script>
+    {% if prism == true %}
+      <link rel="stylesheet" type="text/css" href="/static/css/prism-tomorrow.css">
+    {% endif %}
     <!-- NHS Icons -->
     <link rel="shortcut icon" href="/nhsuk-frontend/assets/favicons/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="/nhsuk-frontend/assets/favicons/apple-touch-icon-180x180.png">
