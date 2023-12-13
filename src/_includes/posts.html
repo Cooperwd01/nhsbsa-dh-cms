@@ -1,27 +1,14 @@
 ---
 layout: default
 ---
-
-<div class="background-hero-image px-4 py-5 text-center" style="background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url({{image}})">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <h1 class="post-title font-bold">{{title}}</h1>
+<div class="nhsuk-width-container">
+  <main class="nhsuk-main-wrapper" id="main-content" role="main">
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">
+        <h1 class="nhsuk-heading-l">{{title}}</h1>
+        <p class="nhsuk-hint">{{ date | readableDate }} by {{ author }}</p>
+        <article class="article-body mt-4">{{ content | safe }}</article>
       </div>
     </div>
-  </div>
-</div>
-<div class="container">
-  <div class="row">
-    <div class="col-12 col-md-9">
-      <article class="article-body mt-4">{{ content | safe }}</article>
-      <p><time>{{ date | readableDate }} by {{ author }}</time></p>
-    </div>
-    <!-- Tags -->
-    <ul class="m-0 pl-0 mb-4 tag-list">
-      {% for tag in tags %}
-        <li id="link-tag-{{ loop.index }}" class="tag-item"><a class="tag-link" href="{{ '/tags/' + tag | slug }}/">{{ tag }}</a></li>
-      {% endfor %}
-    </ul>
-  </div>
+  </main>
 </div>

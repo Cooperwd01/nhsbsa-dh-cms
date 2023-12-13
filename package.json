@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "autoprefixer": "^10.1.0",
+    "nhsuk-frontend": "^8.0.2",
     "postcss": "^8.2.1"
   }
 }

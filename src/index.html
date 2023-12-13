@@ -1,15 +1,26 @@
 ---
 layout: default
-title: Secret North East
+title: NHSBSA Design History
 path: home
 ---
-<div class="container">
-  <div class="row">
-    <div class="col-12 mt-4">
-      <h1>
-        Welcome to <strong class="title-colour-pop">{{title}}</strong>
-      </h1>
+<section class="nhsuk-hero">
+  <div class="nhsuk-width-container nhsuk-hero--border">
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">
+        <div class="nhsuk-hero__wrapper">
+          <h1 class="nhsuk-u-margin-bottom-3">{{title}}</h1>
+          <p class="nhsuk-body-l nhsuk-u-margin-bottom-0">Document and share design decisions, keeping a record of designs we have created and user research we have gathered</p>
+        </div>
+      </div>
     </div>
-    {% include "./_includes/partials/blog-preview.html" %}
   </div>
+</section>
+<div class="nhsuk-width-container">
+  <main id="main-content" class="nhsuk-main-wrapper" role="main">
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">
+        {% include "./_includes/partials/blog-preview.html" %}
+      </div>
+    </div>
+  </main>
 </div>

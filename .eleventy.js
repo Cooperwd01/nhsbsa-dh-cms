@@ -51,6 +51,10 @@ module.exports = function (eleventyConfig) {
       "./static/css/prism-tomorrow.css",
   });
 
+  // NHSUK styles 
+  eleventyConfig.addPassthroughCopy({"node_modules/nhsuk-frontend/packages/assets": "/nhsuk-frontend/assets"});
+  eleventyConfig.addPassthroughCopy({"node_modules/nhsuk-frontend/dist": "/nhsuk-frontend/dist"});
+
   // Copy Image Folder to /_site
   eleventyConfig.addPassthroughCopy("./src/static/img");
 
